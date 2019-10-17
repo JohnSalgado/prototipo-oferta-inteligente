@@ -279,7 +279,6 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-bottom: 3px solid #599DFF;
-  align-items: center;
   padding: 20px;
   justify-items: center;
 }
@@ -305,24 +304,20 @@ a {
   justify-items: center;
 }
 
-.logo-footer a img {
-  width: 56px;
-  height: 56px;
-  float: left;
-}
-
-.logo-footer p {
-  font-family: MONAKO, Georgia, 'Times New Roman', Times, serif;
-  color: #000;
-  font-size: 1.5em;
-  font-weight: bold;
-  float: right;
+.termos img {
+  display: block;
+  margin: 0 auto;
+  max-width: 180px;
 }
 
 .termos-e-cond a {
   font-family: MONAKO, Georgia, 'Times New Roman', Times, serif;
   color: #333;
   font-size: 0.875em;
+}
+
+.input-hamburguer {
+  display: none;
 }
 
 /* Animação maquina de escrever */
@@ -341,10 +336,6 @@ h3::after {
   50% {
     opacity: 0;
   }
-}
-
-.input-hamburguer {
-  display: none;
 }
 
 /* Pontos de quebra */
@@ -377,10 +368,6 @@ h3::after {
 }
 
 @media (max-width: 855px) {
-  .content {
-    /* max-width: 100%; */
-    
-  }
   .header-top {
     grid-template-columns: 300px 300px;
     grid-template-areas: 
@@ -410,9 +397,6 @@ h3::after {
   .encartes-item {
     grid-template-columns: repeat(2, 1fr);
   }
-  .header-bottom {
-    /* display: none; */
-  }
   .logo-centro {
     padding: 10px 40px;
     /* width: 300px; */
@@ -429,13 +413,27 @@ h3::after {
 
 @media (max-width: 755px) {
   .header-top {
-    grid-template-columns: 300px;
+    grid-template-columns: 200px 100px;
   }
   .buscar {
     width: 260px;
   }
   .perfil {
-    display: none;
+    /* display: none; */
+  }
+  .sobre {
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+  }
+  .sobre ul li:last-child {
+    padding-bottom: 10px;
+  }
+  .termos {
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+  }
+  .logo-footer p {
+    font-size: 1em;
   }
 
   /* MENU HAMBURGUER */
