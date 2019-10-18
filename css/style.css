@@ -270,6 +270,10 @@ a {
   grid-gap: 10px;
 }
 
+.mais-buscados-item li:last-child {
+  display: none;
+}
+
 .mais-buscados-item img {
   border-radius: 5px;
 }
@@ -323,6 +327,20 @@ a {
   font-size: 1em;
   display: block;
   padding-bottom: 5px;
+}
+
+.social img {
+  display: flex;
+  max-width: 50px;
+}
+
+.social li {
+  float: left;
+}
+
+.social li:hover {
+  background: rgba(0, 0, 0, .1);
+  border-radius: 5px;
 }
 
 .termos {
@@ -382,9 +400,6 @@ h3::after {
   .header-top {
     grid-template-columns: 200px 500px 200px;
   }
-  .buscar {
-    width: 400px;
-  }
 }
 
 @media (max-width: 955px) {
@@ -423,11 +438,14 @@ h3::after {
   .mais-buscados-item {
     grid-template-columns: repeat(2, 1fr);
   }
+  .mais-buscados-item li:last-child {
+    display: block;
+  }
   .encartes-item {
     grid-template-columns: repeat(2, 1fr);
   }
   .logo-centro {
-    padding: 10px 40px;
+    padding: 10px 30px;
     /* width: 300px; */
   }
   .logo-centro h3 {
@@ -446,9 +464,6 @@ h3::after {
   }
   .buscar {
     width: 260px;
-  }
-  .perfil {
-    /* display: none; */
   }
   .sobre {
     grid-template-columns: 1fr 1fr;
